@@ -4,25 +4,26 @@
     margin: 0;
     padding: 0;
 }
+.container{
+    max-width: 1300px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
 /* Header */
 .header{
     width: 100%;
-    height: 826px;
+    min-height: 826px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/img/background_image.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
-.container{
-    max-width: 1300px;
-    height: 100%;
-    margin: 0 auto;
+.collapse{
+    max-width: 1000px;
 }
-.header_nav{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-.header_nav nav a{
+.collapse a{
     color: white;
     margin-left: 84px;
     text-decoration: none;
@@ -30,8 +31,9 @@
     line-height: 20px;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-    position: relative;
-    top: 55px;
+}
+.navbar-nav a:hover{
+    color: white;
 }
 .button{
     color: white;
@@ -43,6 +45,8 @@
     border-radius: 378px;
     border: 0px;
 }
+
+/* Header Content */
 .header_content{
     position: relative;
     top: 10%;
@@ -67,7 +71,7 @@
 .AboutUs{
     position: relative;
     top: -50px;
-    height: 586px;
+    min-height: 586px;
     background: #EEFFFC;
     border-radius: 35px;
     border-end-end-radius: 0;
@@ -84,7 +88,7 @@
 }
 .head_of_each_blocks{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -94,7 +98,7 @@
     align-items: center;
     margin-top: 29px;
     width: 235.8px;
-    height: 365px;
+    min-height: 365px;
     background: #4D998B;
     border-radius: 35px;  
     color: white; 
@@ -122,14 +126,14 @@
 }
 /* Cources */
 .Cources{
-    height: 586px;
+    min-height: 586px;
     background: white;
     border-radius: 35px;
 }
 .block_of_cources{
     margin-top: 33px;
     width: 360px;
-    height: 284px;
+    min-height: 284px;
     background: #4D998B;
     border-radius: 25px;
     color: white;
@@ -156,7 +160,7 @@
 }
 /* Service */
 .Service{
-    height: 764px;
+    min-height: 764px;
     background: #EEFFFC;
     border-radius: 35px;
     border-end-end-radius: 0px;
@@ -192,7 +196,7 @@
     background: url(/img/club/Background.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 521px;
+    min-height: 521px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -224,9 +228,9 @@
 .application{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    height: 1023px;
+    min-height: 1023px;
     background: #EEFFFC;
 }
 .application p{
@@ -244,10 +248,10 @@ form *{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 .helper p{
     margin-left: 29px;
-    padding: 10px;
     border: 0.43119px solid #5A5A5A;
     font-family: 'Montserrat';
     font-style: normal;
@@ -286,11 +290,6 @@ form *{
     border-radius: 5px;
     border: none;
 }
-iframe{
-    width: 597px;
-    height: 620px;
-}
-
 @media(max-width: 1300px){
     .container{
         max-width: 1000px;
@@ -304,8 +303,13 @@ iframe{
         font-size: 26px;
         line-height: 29px;
     }
-    .header_nav nav{
-        display: none;
+    .p_each_block{
+        font-size: 38px;
+        line-height: 49px;
+    }
+    .club p{
+        font-size: 30px;
+        line-height: 39px;
     }
 }
 @media(max-width: 750px){
@@ -321,6 +325,26 @@ iframe{
         font-size: 16px;
         line-height: 19px;
     }
+    .p_each_block{
+        font-size: 28px;
+        line-height: 39px;
+    }
+    .club p{
+        font-size: 20px;
+        line-height: 29px;
+    }
+    .form_el input{
+        width: 250px;
+        height: 28px;
+    }
+    .application p{
+        font-size: 26px;
+    }
+    .submit{
+        width: 200.34px;
+        height: 32px;
+        font-size: 17px;
+    }
 }
 @media(max-width: 500px){
     .container{
@@ -334,5 +358,13 @@ iframe{
         margin-top: 26px;
         font-size: 16px;
         line-height: 19px;
+    }
+    .p_each_block{
+        font-size: 28px;
+        line-height: 29px;
+    }
+    .club p{
+        font-size: 20px;
+        line-height: 29px;
     }
 }

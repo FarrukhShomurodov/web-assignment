@@ -7,28 +7,34 @@
     <title>Scooba Diving</title>
     <!--Css-->
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
     <!--Header-->
     <div class="header">
-        <div class="container">
-            <div class="header_nav">
+        <nav class="container navbar navbar-dark navbar-expand-lg">
+            <div class="container-fluid d-flex  justify-content-around align-items-center">
                 <img src="/img/logo.png" alt="404" width="200px">
-                <nav>
-                    <a href="#">Home</a>
-                    <a href="#AboutUs">About us</a>
-                    <a href="#coursec">Coursec</a>  
-                    <a href="#service">Service</a>
-                    <a href="#contacts">Contacts</a>
-                    <a><button class="button">Log in</button></a>
-                </nav>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#AboutUs">About us</a>
+                        <a class="nav-link" href="#coursec">Coursec</a>  
+                        <a class="nav-link" href="#service">Service</a>
+                        <a class="nav-link" href="#contacts">Contacts</a>
+                        <a class="nav-link" href="http://127.0.0.1:8000/login">Log In</a>
+                    </div>
+                </div>
             </div>
-            <div class="header_content">
-                <p>Explore the depths of wonder <br>
-                    with our scuba <br>
-                    diving adventures!</p>
-                <button class="button">Explore more</button>
-            </div>
+        </nav>
+        <div class="container header_content">
+            <p>Explore the depths of wonder <br>
+                with our scuba <br>
+                diving adventures!</p>
+            <button class="button">Explore more</button>
         </div>
     </div>
     <!--About Us-->
@@ -145,35 +151,38 @@
     </div>
     <!-- Club -->
     <div class="club">
-        <div>
+        <div class="container">
             <p class="toUp">Join our club to contribute towards the <br> preservation of our oceans</p>
             <button><a>Learn More</a></button>
         </div>
     </div>
     <!-- Application -->
     <div class="application" id="contacts">
-        <form action="" method="">
-            <p>Get in touch with us</p>
-            <div class="helper">
-                <img src="/img/application/ava.png" alt="404">
-                <p>Hi, I'm Amanda. Need help? Use the form below <br> or email me at hello@california_golfclub.org.</p>
-            </div>
-            <div class="form_el">
-                <label for="name">Name</label><br>
-                <input name="name" type="text" id="name">
-            </div>
-            <div class="form_el">
-                <label for="email">Email</label><br>
-                <input name="email" type="email" id="email">
-            </div>
-            <div class="form_el">
-                <label for="message">Message</label><br>
-                <input name="message" type="text" id="message">
-            </div>
-            <input class="submit" type="submit" value="Send my Message">
-        </form>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000.4278427470226!2d69.2130726767049!3d41.23423747131977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae6183ea313917%3A0xdc59607ad734d20c!2sPDP%20University!5e0!3m2!1sru!2s!4v1684077627989!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="">
+            <form action="http://127.0.0.1:8000/api/application" method="post" id="myForm">
+                <p>Get in touch with us</p>
+                <div class="form_el">
+                    <label for="name">Name</label><br>
+                    <input name="name" type="text" id="name">
+                </div>
+                <div class="form_el">
+                    <label for="phone_number">Phone number</label><br>
+                    <input name="phone_number" type="text" id="phone_number">
+                </div>
+                <div class="form_el">
+                    <label for="email">Email</label><br>
+                    <input name="email" type="email" id="email">
+                </div>
+                <div class="form_el">
+                    <label for="message">Message</label><br>
+                    <input name="message" type="text" id="message">
+                </div>
+                <input class="submit" type="submit" value="Send my Message">
+            </form>
+        </div>
     </div>
-    
+
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
